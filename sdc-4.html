@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="in.css">
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+h1 {
+  color:brown;
+  text-align: center;
+  
+  margin-top:100px;
+  text-shadow: 2px 2px 4px #000000;
+} 
+.topnav {
+  overflow: hidden;
+  background-color:hsla(hue, saturation, lightness, alpha);
+}
+
+.topnav a {
+  float: left;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:skyblue;
+  color: black;
+}
+body{
+ background-image: url("https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+
+    </style>
+</head>
+<body>
+  
+  <div id="topnav" class="navbar">
+  
+    <div class="navbar-right menu">
+      <a href="index.html" class="active">
+        Home
+      </a>
+      <a href="sdc-4.html">
+        Gallery
+      </a>
+      <a href="sdc-3.html">
+        Events
+      </a>
+      <a href="sdc-5.html">Our team</a>
+      
+      <a href="conta.html">
+        Contact
+      </a>
+      
+    </div>
+    <div class="navbar-right">
+      <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+    <div class="container">
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/g-10.jpg">
+          </div>
+          <div class="content">
+            <div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/image3.jpg">
+          </div>
+          <div class="content">
+            <div>
+             
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/16-8.jpg">
+          </div>
+          <div class="content">
+            <div>
+             
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://media.licdn.com/dms/image/C5622AQF3V7WG2FrJiw/feedshare-shrink_800/0/1678897194605?e=2147483647&v=beta&t=PuuaYyN13xSgZIuAO0m0NIU5Z0MXgnAJXe23jAm50xk">
+          </div>
+          <div class="content">
+            <div>
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/image4.jpg">
+          </div>
+          <div class="content">
+            <div>
+              
+             
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/img22.jpg">
+          </div>
+          <div class="content">
+            <div>
+             
+             
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/img17.jpg">
+          </div>
+          <div class="content">
+            <div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img src="https://sdc.kongu.edu/SDC_images/img20.jpg">
+          </div>
+          <div class="content">
+            <div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>
